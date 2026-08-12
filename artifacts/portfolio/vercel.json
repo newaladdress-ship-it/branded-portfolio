@@ -1,0 +1,19 @@
+{
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist",
+  "devCommand": "pnpm run dev",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "env": [
+    "GITHUB_USERNAME",
+    "WAKATIME_API_KEY",
+    "UMAMI_API_KEY",
+    "UMAMI_WEBSITE_ID",
+    "GMAIL_USER",
+    "GMAIL_APP_PASSWORD"
+  ]
+}
