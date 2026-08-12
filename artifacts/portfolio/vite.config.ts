@@ -413,7 +413,7 @@ function apiRoutesPlugin(): Plugin {
 
               const ADMIN_NAME = "Muhammad Imran";
               const ADMIN_TITLE = "Web App Developer";
-              const ADMIN_WEBSITE = "imrandigitals.online";
+              const ADMIN_WEBSITE = "www.imrandigitals.com";
               const ADMIN_EMAIL = "mi6062610@gmail.com";
               
               console.log("[v0] DEBUG: Preparing email body");

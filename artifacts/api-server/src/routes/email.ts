@@ -19,7 +19,7 @@ async function sendMailHelper(options: {
   if (resendApiKey) {
     try {
       const resend = new Resend(resendApiKey);
-      const fromEmail = process.env["SENDER_EMAIL"] || "noreply@imrandigitals.online";
+      const fromEmail = process.env["SENDER_EMAIL"] || "noreply@imrandigitals.com";
       
       console.log(`[email] Trying Resend from ${fromEmail} to ${options.to}`);
       const result = await resend.emails.send({
@@ -100,10 +100,10 @@ router.post("/smarttalk/send-email", async (req, res) => {
       : "";
 
     const adminSubject = `New SmartTalk Lead: ${name} <${email}>`;
-    const adminBody = `You have a new project enquiry from your portfolio SmartTalk AI.\n\nCLIENT DETAILS:\nName: ${name}\nEmail: ${email}\nSession ID: ${sessionId || "N/A"}${leadSection}\n\nFULL CHAT TRANSCRIPT:\n\n${transcript}\n\n---\nSent automatically from imrandigitals.online`;
+    const adminBody = `You have a new project enquiry from your portfolio SmartTalk AI.\n\nCLIENT DETAILS:\nName: ${name}\nEmail: ${email}\nSession ID: ${sessionId || "N/A"}${leadSection}\n\nFULL CHAT TRANSCRIPT:\n\n${transcript}\n\n---\nSent automatically from www.imrandigitals.com`;
 
     const userSubject = `Your SmartTalk consultation with ${ADMIN_NAME}`;
-    const userBody = `Hi ${name},\n\nThank you for reaching out through SmartTalk AI on imrandigitals.online!\n\nYour consultation has been received and ${ADMIN_NAME} will review your project requirements and get back to you shortly.\n\nHere is a copy of your consultation transcript:\n\n${transcript}\n\n---\nBest regards,\n${ADMIN_NAME}\nWeb App Developer · imrandigitals.online\nWhatsApp: +92 334 563 6230`;
+    const userBody = `Hi ${name},\n\nThank you for reaching out through SmartTalk AI on www.imrandigitals.com!\n\nYour consultation has been received and ${ADMIN_NAME} will review your project requirements and get back to you shortly.\n\nHere is a copy of your consultation transcript:\n\n${transcript}\n\n---\nBest regards,\n${ADMIN_NAME}\nWeb App Developer · www.imrandigitals.com\nWhatsApp: +92 334 563 6230`;
 
     await Promise.allSettled([
       sendMailHelper({
@@ -142,7 +142,7 @@ router.post("/admin/reply-email", async (req, res) => {
     }
 
     const subject = `Re: Your SmartTalk consultation — Reply from ${ADMIN_NAME}`;
-    const body = `Hi ${userName || "there"},\n\n${replyMessage}${originalMessage ? `\n\n---\nYour original message:\n${originalMessage}` : ""}\n\n---\nBest regards,\n${ADMIN_NAME}\nWeb App Developer · imrandigitals.online\nWhatsApp: +92 334 563 6230`;
+    const body = `Hi ${userName || "there"},\n\n${replyMessage}${originalMessage ? `\n\n---\nYour original message:\n${originalMessage}` : ""}\n\n---\nBest regards,\n${ADMIN_NAME}\nWeb App Developer · www.imrandigitals.com\nWhatsApp: +92 334 563 6230`;
 
     await sendMailHelper({
       fromName: ADMIN_NAME,
