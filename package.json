@@ -5,7 +5,7 @@
   "scripts": {
     "preinstall": "node -e \"import('fs').then(fs => { ['package-lock.json', 'yarn.lock'].forEach(f => fs.existsSync(f) && fs.existsSync(f) && fs.unlinkSync(f)); })\"",
     "dev": "pnpm --filter @workspace/portfolio run dev",
-    "build": "pnpm run typecheck && pnpm -r --if-present run build && node -e \"import('fs').then(fs => { if (fs.existsSync('artifacts/api-server/dist/app.mjs')) { fs.mkdirSync('api', { recursive: true }); fs.copyFileSync('artifacts/api-server/dist/app.mjs', 'api/app.mjs'); } })\"",
+    "build": "pnpm run typecheck && pnpm -r --if-present run build && node -e \"import('fs').then(fs => { if (fs.existsSync('artifacts/api-server/dist/app.mjs')) { fs.mkdirSync('api', { recursive: true }); fs.copyFileSync('artifacts/api-server/dist/app.mjs', 'api/app.mjs'); } if (fs.existsSync('artifacts/portfolio/dist')) { fs.cpSync('artifacts/portfolio/dist', 'dist', { recursive: true, force: true }); } })\"",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
   },
