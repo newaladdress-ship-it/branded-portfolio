@@ -4,10 +4,9 @@ import SectionHeading from "@/components/layout/SectionHeading";
 import SpotlightCard from "@/components/layout/SpotlightCard";
 import Breakline from "@/components/layout/Breakline";
 import { MdArticle, MdArrowForward, MdCalendarToday, MdTimer } from "react-icons/md";
-import { BLOG_POSTS, BLOG_CATEGORIES, getFeaturedBlogPosts } from "@/data/blog";
+import { BLOG_POSTS, BLOG_CATEGORIES } from "@/data/blog";
 
 export default function BlogIndexPage() {
-  const featured = getFeaturedBlogPosts(3);
   const recentPosts = BLOG_POSTS.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 12);
 
   const breadcrumbJsonLd = {
@@ -66,64 +65,32 @@ export default function BlogIndexPage() {
 
       <Breakline />
 
-      {/* Featured Posts */}
+      {/* Articles */}
       <div className="space-y-3">
-        <SectionHeading title="Featured Articles" icon={<MdArticle />} />
-        <div className="grid sm:grid-cols-3 gap-4 mt-2">
-          {featured.map((post) => (
+        <SectionHeading title="Articles" icon={<MdArticle />} />
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          {recentPosts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`}>
-              <SpotlightCard className="p-4 cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors h-full flex flex-col">
+              <SpotlightCard className="p-5 cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors">
                 <div className="flex items-center gap-1.5 text-xs font-medium mb-2">
                   <span className="rounded-full bg-neutral-100 dark:bg-neutral-800 px-2.5 py-1 text-neutral-700 dark:text-neutral-300">
-                    {BLOG_CATEGORIES[post.category].label}
+                    {BLOG_CATEGORIES[post.category]?.label ?? post.category}
                   </span>
                 </div>
-                <h3 className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 mb-2 flex-grow">
+                <h3 className="text-base font-semibold text-neutral-800 dark:text-neutral-200 mb-2">
                   {post.title}
                 </h3>
-                <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-3 line-clamp-2">
+                <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-500 pt-2 border-t border-neutral-200 dark:border-neutral-800">
+                <div className="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-500 pt-3 border-t border-neutral-200 dark:border-neutral-800">
                   <span className="flex items-center gap-1">
                     <MdCalendarToday size={12} />
-                    {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                    {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
                   </span>
                   <span className="flex items-center gap-1">
                     <MdTimer size={12} />
-                    {post.readTime}m
-                  </span>
-                </div>
-              </SpotlightCard>
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      <Breakline />
-
-      {/* Recent Posts */}
-      <div className="space-y-3">
-        <SectionHeading title="Latest Articles" icon={<MdArticle />} />
-        <div className="grid sm:grid-cols-2 gap-4 mt-2">
-          {recentPosts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`}>
-              <SpotlightCard className="p-4 cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors">
-                <div className="flex items-start justify-between mb-2">
-                  <span className="text-xs font-medium rounded-full bg-neutral-100 dark:bg-neutral-800 px-2.5 py-1 text-neutral-700 dark:text-neutral-300">
-                    {BLOG_CATEGORIES[post.category].label}
-                  </span>
-                </div>
-                <h3 className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 mb-2">
-                  {post.title}
-                </h3>
-                <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-3 line-clamp-2">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-500">
-                  <span>{new Date(post.date).toLocaleDateString()}</span>
-                  <span className="flex items-center gap-1">
-                    {post.readTime}m read
+                    {post.readTime} min read
                   </span>
                 </div>
               </SpotlightCard>

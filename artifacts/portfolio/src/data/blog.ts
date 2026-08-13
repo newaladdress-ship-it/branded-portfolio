@@ -149,7 +149,14 @@ Ask directly. Some developers build SEO fundamentals into the base project; othe
 
 **How long does a typical business website take to build in Multan?**
 A standard business website usually takes 1-2 weeks; e-commerce and custom applications take longer depending on scope.`
-  },
+  }
+];
+
+/*
+===============================================================================
+REMOVED BLOG POSTS (COMMENTED OUT):
+===============================================================================
+
   {
     slug: "react-vs-wordpress-multan-small-business",
     title: "React vs WordPress for Small Business Websites in Multan: Which Should You Actually Choose?",
@@ -388,8 +395,8 @@ We are moving toward a world where AI agents will book appointments and make pur
 - [ ] Content follows a clear "Entity-Attribute-Value" structure
 
 **Don't get left behind in the AI revolution.** I specialize in building **AI-ready websites** that rank in both traditional search and modern AI overviews. [Explore my AIO services](/services/seo-optimization).`
-  },
-];
+  }
+*/
 
 export function getFeaturedBlogPosts(count: number = 3): BlogPost[] {
   return BLOG_POSTS.slice(0, count);
@@ -398,3 +405,4 @@ export function getFeaturedBlogPosts(count: number = 3): BlogPost[] {
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);
 }
+
