@@ -216,7 +216,7 @@ export default function HomePage() {
               <span>Full-Stack Web Developer &amp; AI Developer in Multan</span>
             </div>
 
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#17211E] dark:text-[#F5F2EC] leading-[1.15]">
+            <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#17211E] dark:text-[#F5F2EC] leading-[1.25]">
               Fast, scalable websites, custom web applications, software, and AI-powered digital solutions built around your business goals.
             </h1>
 

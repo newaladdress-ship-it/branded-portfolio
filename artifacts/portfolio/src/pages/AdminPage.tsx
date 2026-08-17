@@ -103,7 +103,7 @@ function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
               <HiOutlineLockClosed size={28} />
             </div>
           </div>
-          <h1 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">Admin Panel</h1>
+          <h2 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">Admin Panel</h2>
           <p className="text-sm text-neutral-500 dark:text-neutral-400">Enter the password to continue</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">

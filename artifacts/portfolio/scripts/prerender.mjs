@@ -409,8 +409,8 @@ function buildHtml(route) {
           <span style="width:0.5rem;height:0.5rem;border-radius:9999px;background-color:#C96A3D;"></span>
           <span>Full-Stack Web Developer in Multan</span>
         </div>
-        <h1 style="font-size:2.25rem;line-height:1.15;font-weight:700;letter-spacing:-0.02em;margin-top:1.5rem;margin-bottom:1.5rem;color:#17211E;font-family:'Manrope',system-ui,sans-serif;">
-          Fast, scalable websites and custom web applications built around your business goals.
+        <h1 style="font-size:1.875rem;line-height:1.25;font-weight:700;letter-spacing:-0.02em;margin-top:1.5rem;margin-bottom:1.5rem;color:#17211E;font-family:'Manrope',system-ui,sans-serif;">
+          Fast, scalable websites, custom web applications, software, and AI-powered digital solutions built around your business goals.
         </h1>
         <p style="font-size:1.125rem;line-height:1.6;color:#5C655F;max-width:48rem;margin-bottom:1rem;">
           I'm Muhammad Imran, a full-stack web developer based in Multan, Pakistan. I build business websites, custom web applications, dashboards, and digital tools using React, Next.js, TypeScript, Node.js, and modern web technologies.
@@ -430,7 +430,7 @@ function buildHtml(route) {
   } else {
     rootContent = `<div style="background-color:#F5F2EC;color:#17211E;min-height:100vh;font-family:'Inter',system-ui,-apple-system,sans-serif;">
       <div style="max-width:56rem;margin:0 auto;padding:2rem 1.25rem;padding-top:6rem;">
-        <h1 style="font-size:2.25rem;line-height:1.15;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem;color:#17211E;font-family:'Manrope',system-ui,sans-serif;">
+        <h1 style="font-size:2rem;line-height:1.2;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem;color:#17211E;font-family:'Manrope',system-ui,sans-serif;">
           ${escapeHtml(route.h1)}
         </h1>
         <p style="font-size:1.125rem;line-height:1.6;color:#5C655F;max-width:48rem;margin-bottom:1.5rem;">
@@ -442,7 +442,7 @@ function buildHtml(route) {
 
   const fallback = `<noscript>
     <div style="max-width:680px;margin:80px auto;padding:0 24px;font-family:system-ui,sans-serif;color:#222;line-height:1.6">
-      <h1>${escapeHtml(route.h1)}</h1>
+      <p style="font-size:1.5rem;font-weight:700;margin-bottom:0.75rem">${escapeHtml(route.h1)}</p>
       <p>${escapeHtml(route.content || "")}</p>
       <hr style="margin:2rem 0;border:0;border-top:1px solid #eee" />
       <nav>

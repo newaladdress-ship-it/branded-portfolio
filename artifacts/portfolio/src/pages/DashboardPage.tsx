@@ -831,7 +831,10 @@ export default function DashboardPage() {
         path="/dashboard"
       />
       <div className="space-y-2">
-        <SectionHeading title={t.dashboard.heading} icon={<BiCategory />} />
+        <div className="flex items-center gap-1.5 text-xl font-medium text-neutral-800 dark:text-neutral-300">
+          <i><BiCategory /></i>
+          <h1 className="capitalize font-medium text-xl text-neutral-800 dark:text-neutral-300">{t.dashboard.heading}</h1>
+        </div>
         <SectionSubHeading>
           <p>{t.dashboard.sub}</p>
         </SectionSubHeading>
