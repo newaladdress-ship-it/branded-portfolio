@@ -59,6 +59,54 @@ export const LOCATIONS: Location[] = [
     ctaBody:
       "Share your goal, current website, and timeline. I will respond with practical next steps and a clear scope for your project.",
   },
+  {
+    slug: "bahawalpur",
+    city: "Bahawalpur",
+    province: "Punjab",
+    metaTitle: "Web & Software Developer in Bahawalpur | Imran Digitals",
+    metaDescription:
+      "Need a website or software developer in Bahawalpur? Imran Digitals delivers fast websites, SEO, e-commerce, and custom software remotely from Multan.",
+    h1: "Web Developer & Software Developer in Bahawalpur",
+    intro:
+      "Imran Digitals helps businesses, educators, hospitality teams, and growing organizations in Bahawalpur build useful websites and software through a remote-first process from Multan. Discovery, design, development, SEO, and support are handled digitally with clear communication and a practical scope; this is a service-area offering, not a Bahawalpur office.",
+    highlights: [
+      { label: "Service area", value: "Bahawalpur, Punjab" },
+      { label: "Delivery", value: "Remote from Multan" },
+      { label: "Best for", value: "SMEs and growing teams" },
+      { label: "Typical reply", value: "Within 24 hours" },
+    ],
+    about:
+      "Bahawalpur brings together agriculture and agri-business, education, hospitality, retail, professional services, and small and medium-sized businesses serving South Punjab. For these organizations, a clear website can explain services, earn enquiries, support local search visibility, and make it easier for customers to take the next step. Imran Digitals provides the technical side of that work remotely from Multan, including business websites, e-commerce builds, custom software, and technical SEO. The page is intended for businesses looking for a dependable digital partner for Bahawalpur projects, without claiming a local office or in-person presence in the city.",
+    services: [
+      "Business website development for Bahawalpur organizations",
+      "E-commerce website development for products and services",
+      "Custom business software, dashboards, and internal tools",
+      "Technical SEO and website speed optimization",
+      "React, Next.js, and MERN stack web applications",
+      "Website redesigns, maintenance, and feature improvements",
+    ],
+    faqs: [
+      {
+        q: "Can I hire Imran Digitals for a Bahawalpur project from Multan?",
+        a: "Yes. Bahawalpur projects are delivered remotely from Multan using video calls, shared documents, online approvals, and a clear milestone-based workflow. I do not present this service as a Bahawalpur office or local branch.",
+      },
+      {
+        q: "What can you build for a Bahawalpur business?",
+        a: "Depending on the goal, I can build a business website, e-commerce store, custom web application, dashboard, or business software workflow, then prepare the technical SEO foundation for launch.",
+      },
+      {
+        q: "Can you help a Bahawalpur business improve its Google visibility?",
+        a: "Yes. I can review technical SEO, page structure, content clarity, Core Web Vitals, internal links, and local service-area signals. Results depend on the site, competition, content quality, and ongoing work, so no ranking position is promised.",
+      },
+      {
+        q: "How does remote collaboration work?",
+        a: "We start with your goals, audience, current website, and timeline. I then provide a practical scope, communicate progress online, share staging links for review, and hand over the finished site with agreed support arrangements.",
+      },
+    ],
+    ctaHeading: "Planning a website or software project in Bahawalpur?",
+    ctaBody:
+      "Send your business goal, current website if you have one, and preferred timeline. I will review the brief remotely from Multan and reply with practical next steps, scope, and the information needed to begin.",
+  },
 ];
 
 export function getLocationBySlug(slug: string): Location | undefined {

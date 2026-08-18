@@ -14,13 +14,44 @@ export default function LocationsIndexPage() {
   const kp = getLocationsByProvince("Khyber Pakhtunkhwa");
   const balochistan = getLocationsByProvince("Balochistan");
   const ict = getLocationsByProvince("ICT");
+  const locationItems = LOCATIONS.map((location, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: `Web Developer in ${location.city}`,
+    url: `https://www.imrandigitals.com/locations/${location.slug}`,
+  }));
+  const locationsSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Imran Digitals Service Locations",
+    url: "https://www.imrandigitals.com/locations",
+    about: {
+      "@type": "ProfessionalService",
+      name: "Imran Digitals",
+      areaServed: "Pakistan",
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: locationItems,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.imrandigitals.com/" },
+      { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.imrandigitals.com/locations" },
+    ],
+  };
 
   return (
     <section className="space-y-8">
       <SEOHead
         title="Web Developer in Multan, Pakistan | Imran Digitals"
-        description="Imran Digitals is a web developer in Multan serving businesses across Pakistan and worldwide with websites, web applications, and technical SEO."
+        description="Explore Imran Digitals service locations. Based in Multan, I serve businesses across Pakistan and worldwide with websites, web applications, and technical SEO."
         path="/locations"
+        jsonLd={[locationsSchema, breadcrumbSchema]}
       />
 
       {/* Breadcrumbs */}
