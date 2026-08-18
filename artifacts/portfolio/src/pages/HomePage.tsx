@@ -11,7 +11,7 @@ import {
   Sparkles, Cpu, Bot, CheckCircle2, Wrench
 } from "lucide-react";
 
-const BASE_URL = "https://www.imrandigitals.online";
+const BASE_URL = "https://www.imrandigitals.com";
 const OG_IMAGE = `${BASE_URL}/opengraph.jpg`;
 
 /* ---------------- JSON-LD structured data ---------------- */
@@ -29,7 +29,7 @@ const personSchema = {
     "@type": "PostalAddress",
     addressLocality: "Multan",
     addressRegion: "Punjab",
-    postalCode: "60060",
+    postalCode: "60600",
     addressCountry: "PK",
     streetAddress: PERSONAL.address,
   },
@@ -52,7 +52,7 @@ const localBusinessSchema = {
     "@type": "PostalAddress",
     addressLocality: "Multan",
     addressRegion: "Punjab",
-    postalCode: "60060",
+    postalCode: "60600",
     addressCountry: "PK",
     streetAddress: PERSONAL.address,
   },

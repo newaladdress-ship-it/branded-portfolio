@@ -218,6 +218,7 @@ const CORE_ROUTES = [
   {
     path: "/smarttalk",
     file: "smarttalk.html",
+    noIndex: true,
     title: "SmartTalk AI Assistant | Muhammad Imran Web Portfolio",
     description: "Interact with SmartTalk AI assistant on Muhammad Imran's portfolio to get instant answers about web development services, tech stack options, and project quotes.",
     h1: "SmartTalk AI Assistant",
@@ -228,6 +229,7 @@ const CORE_ROUTES = [
   {
     path: "/dev-profile",
     file: "dev-profile.html",
+    noIndex: true,
     title: "Developer Technical Profile | Muhammad Imran Portfolio",
     description: "Comprehensive technical developer profile of Muhammad Imran detailing active programming language skills, GitHub statistics, and software engineering tools.",
     h1: "Developer Technical Profile",
@@ -238,6 +240,7 @@ const CORE_ROUTES = [
   {
     path: "/dashboard",
     file: "dashboard.html",
+    noIndex: true,
     title: "Developer Dashboard & Analytics | Imran Digitals",
     description: "Explore the live developer activity dashboard displaying GitHub repositories, real-time coding metrics, system stats, and site performance analytics for Imran.",
     h1: "Live Metrics & Analytics Dashboard",
@@ -248,6 +251,7 @@ const CORE_ROUTES = [
   {
     path: "/chat",
     file: "chat.html",
+    noIndex: true,
     title: "Live Developer Chat Room | Muhammad Imran Portfolio",
     description: "Join the interactive live chat room on Muhammad Imran's portfolio website to send instant messages, discuss web project requirements, or ask technical questions.",
     h1: "Live Portfolio Chat Room",
@@ -258,6 +262,7 @@ const CORE_ROUTES = [
   {
     path: "/admin",
     file: "admin.html",
+    noIndex: true,
     title: "Admin Panel | Imran Digitals",
     description: "Private administration area for Imran Digitals.",
     h1: "Admin Panel",
@@ -347,7 +352,7 @@ function buildHtml(route) {
         "@type": "PostalAddress",
         addressLocality: "Multan",
         addressRegion: "Punjab",
-        postalCode: "60060",
+        postalCode: "60600",
         addressCountry: "PK",
       },
       knowsAbout: ["React", "Next.js", "Node.js", "MERN Stack", "JavaScript", "TypeScript", "Web Development", "Technical SEO"],
@@ -388,6 +393,10 @@ function buildHtml(route) {
     .replace(
       /<meta name="description" content="[^"]*"\s*\/?>/,
       `<meta name="description" content="${escapeAttr(route.description)}" />`
+    )
+    .replace(
+      /<meta name="robots" content="[^"]*"\s*\/?>/,
+      `<meta name="robots" content="${route.noIndex ? "noindex, nofollow" : "index, follow"}" />`
     )
     .replace(
       /<link rel="stylesheet"([^>]+)href="\/css\//g,
@@ -481,7 +490,7 @@ function generateSitemapAndRobots(routes) {
 `;
 
   for (const route of routes) {
-    if (route.path === "/admin") continue;
+    if (route.noIndex || route.path === "/admin") continue;
     const loc = `${BASE_URL}${route.path === "/" ? "/" : route.path}`;
     sitemapXml += `  <url>
     <loc>${loc}</loc>

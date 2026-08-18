@@ -829,6 +829,7 @@ export default function DashboardPage() {
         title="Live Developer Dashboard - Muhammad Imran Code Stats"
         description="Real-time developer dashboard showing live GitHub activity, coding hours, language breakdown, and portfolio analytics for Muhammad Imran."
         path="/dashboard"
+        noIndex
       />
       <div className="space-y-2">
         <div className="flex items-center gap-1.5 text-xl font-medium text-neutral-800 dark:text-neutral-300">

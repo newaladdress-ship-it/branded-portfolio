@@ -183,7 +183,7 @@ export default function ProjectDetailPage() {
             <div className="flex-1 max-w-xl mx-4 flex items-center justify-between rounded-lg border border-[#D9D4CA]/80 dark:border-[#2A3632] bg-[#FFFEFA] dark:bg-[#1B2421] px-3 py-1.5 text-xs font-mono text-[#5C655F] dark:text-[#9DA6A0]">
               <div className="flex items-center gap-2 truncate">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-                <span className="truncate">{project.liveUrl || project.previewUrl || "https://imrandigitals.com"}</span>
+                <span className="truncate">{project.liveUrl || project.previewUrl || "https://www.imrandigitals.com"}</span>
               </div>
               {project.liveUrl && (
                 <button

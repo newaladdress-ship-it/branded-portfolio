@@ -78,8 +78,8 @@ export default function ContactPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://imrandigitals.com/" },
-      { "@type": "ListItem", position: 2, name: "Contact", item: "https://imrandigitals.com/contact" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.imrandigitals.com/" },
+      { "@type": "ListItem", position: 2, name: "Contact", item: "https://www.imrandigitals.com/contact" },
     ],
   };
 
@@ -99,7 +99,7 @@ export default function ContactPage() {
       },
       email: PERSONAL.email,
       telephone: "+923019316123",
-      url: "https://imrandigitals.com",
+      url: "https://www.imrandigitals.com",
     },
   };
 

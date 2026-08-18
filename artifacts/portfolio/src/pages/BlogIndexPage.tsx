@@ -7,14 +7,14 @@ import { MdArticle, MdArrowForward, MdCalendarToday, MdTimer } from "react-icons
 import { BLOG_POSTS, BLOG_CATEGORIES } from "@/data/blog";
 
 export default function BlogIndexPage() {
-  const recentPosts = BLOG_POSTS.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 12);
+  const recentPosts = [...BLOG_POSTS].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 12);
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.imrandigitals.online/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.imrandigitals.online/blog" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.imrandigitals.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.imrandigitals.com/blog" },
     ],
   };
 
@@ -22,20 +22,20 @@ export default function BlogIndexPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Web Development Blog",
-    description: "Tutorials and guides on React, Node.js, and modern web development.",
+    description: "Practical SEO, website performance, and web-development guides for Multan businesses and modern teams.",
     itemListElement: recentPosts.map((post, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: post.title,
-      url: `https://www.imrandigitals.online/blog/${post.slug}`,
+      url: `https://www.imrandigitals.com/blog/${post.slug}`,
     })),
   };
 
   return (
     <section className="space-y-8">
       <SEOHead
-        title="Web Development Blog - React and Node.js Coding Tips"
-        description="Read expert web development tutorials, React tips, Node.js guides, and full-stack development articles by Muhammad Imran."
+        title="SEO & Web Development Guides | Imran Digitals"
+        description="Practical SEO, website performance, and web-development guides for Multan businesses by Muhammad Imran at Imran Digitals."
         path="/blog"
         jsonLd={[breadcrumbJsonLd, blogCollectionJsonLd]}
       />
@@ -56,10 +56,10 @@ export default function BlogIndexPage() {
       <header className="space-y-3">
         <SectionHeading title="Blog" icon={<MdArticle />} />
         <h1 className="text-2xl sm:text-3xl font-semibold text-neutral-900 dark:text-neutral-100 leading-tight">
-          Web Development Tips, Tutorials & Guides
+          SEO & Web Development Guides for Businesses
         </h1>
         <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          Expert articles on React, Node.js, Next.js, database optimization, and full-stack web development. Learn best practices and industry insights.
+          Practical guidance on website SEO, performance optimization, local visibility, and choosing the right web-development approach for a business.
         </p>
       </header>
 

@@ -211,8 +211,8 @@ export default function SmartTalkPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://imrandigitals.com/" },
-      { "@type": "ListItem", position: 2, name: "SmartTalk AI", item: "https://imrandigitals.com/smarttalk" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.imrandigitals.com/" },
+      { "@type": "ListItem", position: 2, name: "SmartTalk AI", item: "https://www.imrandigitals.com/smarttalk" },
     ],
   };
 
@@ -222,7 +222,7 @@ export default function SmartTalkPage() {
     name: "SmartTalk AI | Muhammad Imran's AI Portfolio Assistant",
     description:
       "Chat with SmartTalk AI to explore Muhammad Imran's web development, AI solutions, projects, services, skills, and experience, or discuss your project.",
-    url: "https://imrandigitals.com/smarttalk",
+    url: "https://www.imrandigitals.com/smarttalk",
   };
 
   return (
@@ -231,6 +231,7 @@ export default function SmartTalkPage() {
         title="SmartTalk AI | Muhammad Imran's AI Portfolio Assistant"
         description="Chat with SmartTalk AI to explore Muhammad Imran's web development, AI solutions, projects, services, skills, and experience, or discuss your project."
         path="/smarttalk"
+        noIndex
         jsonLd={[breadcrumbJsonLd, webPageJsonLd]}
       />
 

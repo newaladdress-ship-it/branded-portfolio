@@ -116,9 +116,24 @@ function AppLayout() {
   const [isDeferredLoaded, setIsDeferredLoaded] = React.useState(false);
 
   useEffect(() => {
-    // Load non-critical components after a delay to improve FCP/LCP
-    const timer = setTimeout(() => setIsDeferredLoaded(true), 2000);
-    return () => clearTimeout(timer);
+    // Defer non-critical components until the browser is idle so route chunks and
+    // primary content get priority during the first navigation.
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let idleId: number | undefined;
+    const loadDeferred = () => setIsDeferredLoaded(true);
+
+    if ("requestIdleCallback" in window) {
+      idleId = window.requestIdleCallback(loadDeferred, { timeout: 4000 });
+    } else {
+      timer = setTimeout(loadDeferred, 4000);
+    }
+
+    return () => {
+      if (idleId !== undefined && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(idleId);
+      }
+      if (timer) clearTimeout(timer);
+    };
   }, []);
 
   return (

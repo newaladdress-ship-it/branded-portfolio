@@ -31,7 +31,7 @@ import {
   Figma as FigmaIcon,
 } from "lucide-react";
 
-const BASE_URL = "https://imrandigitals.com";
+const BASE_URL = "https://www.imrandigitals.com";
 
 const SERVICES_DATA = [
   {

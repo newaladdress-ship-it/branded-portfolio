@@ -144,6 +144,7 @@ export default function DevProfilePage() {
         title="Muhammad Imran - React and MERN Stack Developer Profile"
         description="Full developer profile of Muhammad Imran, a React and MERN stack web developer in Pakistan. Check out my skills and project history."
         path="/dev-profile"
+        noIndex
       />
       {/* Introduction */}
       <section className="space-y-2 bg-cover bg-no-repeat">

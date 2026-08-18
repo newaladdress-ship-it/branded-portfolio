@@ -401,8 +401,8 @@ export default function FeedbackPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://imrandigitals.com/" },
-      { "@type": "ListItem", position: 2, name: "Portfolio Feedback", item: "https://imrandigitals.com/feedback" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.imrandigitals.com/" },
+      { "@type": "ListItem", position: 2, name: "Portfolio Feedback", item: "https://www.imrandigitals.com/feedback" },
     ],
   };
 
@@ -412,7 +412,7 @@ export default function FeedbackPage() {
     name: "Portfolio Feedback | Muhammad Imran",
     description:
       "Share feedback about Muhammad Imran's portfolio, projects, services, and development work. Sign in with Google or GitHub to leave a review.",
-    url: "https://imrandigitals.com/feedback",
+    url: "https://www.imrandigitals.com/feedback",
   };
 
   return (

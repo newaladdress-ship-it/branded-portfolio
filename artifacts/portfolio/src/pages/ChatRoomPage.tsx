@@ -472,8 +472,8 @@ export default function ChatRoomPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://imrandigitals.com/" },
-      { "@type": "ListItem", position: 2, name: "Community Chat Room", item: "https://imrandigitals.com/chat" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.imrandigitals.com/" },
+      { "@type": "ListItem", position: 2, name: "Community Chat Room", item: "https://www.imrandigitals.com/chat" },
     ],
   };
 
@@ -496,7 +496,7 @@ export default function ChatRoomPage() {
     name: "Community Chat Room | Imran Digitals",
     description:
       "Join the Imran Digitals community chat room to connect, share ideas, ask questions, and collaborate with other members in real time.",
-    url: "https://imrandigitals.com/chat",
+    url: "https://www.imrandigitals.com/chat",
   };
 
   return (
@@ -505,6 +505,7 @@ export default function ChatRoomPage() {
         title="Community Chat Room | Imran Digitals"
         description="Join the Imran Digitals community chat room to connect, share ideas, ask questions, and collaborate with other members in real time."
         path="/chat"
+        noIndex
         jsonLd={[breadcrumbJsonLd, faqJsonLd, webPageJsonLd]}
       />
 

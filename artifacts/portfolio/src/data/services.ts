@@ -442,7 +442,7 @@ export const SERVICES: Service[] = [
   {
     slug: "mern-stack-development",
     keyword: "MERN stack developer in Multan, MERN stack development, MongoDB Express React Node.js, MERN web applications, MERN dashboards, MERN admin panels, MERN developer Pakistan",
-    metaTitle: "MERN Stack Developer in Multan | Muhammad Imran",
+    metaTitle: "MERN Stack Development in Multan | Imran Digitals",
     metaDescription: "MERN stack development in Multan by Muhammad Imran. Build custom React, Node.js, Express, and MongoDB web applications, dashboards, and software.",
     h1: "MERN Stack Development in Multan",
     intro:
@@ -720,7 +720,7 @@ export const SERVICES: Service[] = [
   {
     slug: "dashboard-admin-panel-development",
     keyword: "Dashboard & Admin Panel Development in Multan, dashboard development, admin panel development, custom admin panel, dashboard developer, business dashboard development, SaaS dashboard development, admin dashboard development, custom dashboard development, data management dashboard, web admin panel development",
-    metaTitle: "Dashboard & Admin Panel Development in Multan",
+    metaTitle: "Custom Dashboard Development in Multan | Imran Digitals",
     metaDescription: "Custom dashboard and admin panel development in Multan by Muhammad Imran. Build business dashboards, SaaS panels, data management systems, and admin interfaces.",
     h1: "Dashboard & Admin Panel Development in Multan",
     intro:
@@ -1006,7 +1006,7 @@ export const SERVICES: Service[] = [
     slug: "seo-multan",
     keyword: "seo company in multan",
     metaTitle: "SEO Company in Multan - Web Developer and SEO Expert",
-    metaDescription: "Technical SEO audits, schema markup, and speed optimization from a full-stack web developer in Multan.",
+    metaDescription: "Technical SEO audits, schema markup, and performance optimization in Multan by a full-stack developer helping local businesses improve crawlability, speed, and search visibility.",
     h1: "Technical SEO & Performance Services in Multan",
     intro:
       "I am Muhammad Imran, a full-stack web developer based in Multan, Pakistan offering technical SEO services to local businesses, agencies, and online stores. If you are searching for honest technical SEO that actually focuses on clean code, site speed, and search visibility, you are in the right place. No spammy tactics, no hidden retainers - just real, technical SEO that helps your site rank.",
@@ -2227,7 +2227,7 @@ export const SERVICES: Service[] = [
   {
     slug: "technical-seo-website-performance",
     keyword: "Technical SEO, Website Performance, Core Web Vitals, Indexing, Structured Data, Technical SEO for Next.js, Technical SEO services Multan, website speed optimization, crawlability",
-    metaTitle: "Technical SEO & Website Performance Services | Muhammad Imran",
+    metaTitle: "Technical SEO & Performance in Multan | Imran Digitals",
     metaDescription: "Technical SEO and website performance services in Multan by Muhammad Imran. Improve crawlability, indexing, Core Web Vitals, Next.js SEO, and speed.",
     h1: "Technical SEO & Website Performance Services in Multan",
     intro:
