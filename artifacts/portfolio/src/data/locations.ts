@@ -9,6 +9,7 @@ export type Location = {
   highlights: { label: string; value: string }[];
   about: string;
   services: string[];
+  serviceLinks?: { label: string; slug: string }[];
   faqs: { q: string; a: string }[];
   ctaHeading: string;
   ctaBody: string;
@@ -84,6 +85,12 @@ export const LOCATIONS: Location[] = [
       "Technical SEO and website speed optimization",
       "React, Next.js, and MERN stack web applications",
       "Website redesigns, maintenance, and feature improvements",
+    ],
+    serviceLinks: [
+      { label: "Business website development", slug: "business-website-development" },
+      { label: "Custom web application development", slug: "custom-web-application-development" },
+      { label: "Business software development", slug: "business-software-development" },
+      { label: "Technical SEO and website performance", slug: "technical-seo-website-performance" },
     ],
     faqs: [
       {

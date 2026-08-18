@@ -142,6 +142,22 @@ export default function LocationPage() {
             </li>
           ))}
         </ul>
+        {location.serviceLinks && location.serviceLinks.length > 0 && (
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            Explore related services: {location.serviceLinks.map((service, index) => (
+              <span key={service.slug}>
+                {index > 0 && ", "}
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="text-neutral-800 dark:text-neutral-200 underline underline-offset-2 hover:text-neutral-500 dark:hover:text-neutral-400"
+                >
+                  {service.label}
+                </Link>
+              </span>
+            ))}
+            .
+          </p>
+        )}
       </div>
 
       <Breakline />
